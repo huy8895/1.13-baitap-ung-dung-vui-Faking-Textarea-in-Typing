@@ -23,23 +23,19 @@
         <script>
             let arrayFake = ['H','e','l','l','o',' ','B','a','b','e',' ','t','h','ậ','t',' ','t','u','y','ệ','t',' ','p','h','ả','i',' ','k','h','ô','n','g',' ','n','à','o',];
             let newFaketext = [];
-            let showValue = ''
+            let showValue = '';
             let i = 0;
             function typeFaking(textAreaValue) {
-                if (i <= arrayFake.length){
+                if (i < arrayFake.length){
                     newFaketext[i] = arrayFake[i]
                     showValue = newFaketext.join('')
-                } else if(i > arrayFake.length){
+                } else if(i >= arrayFake.length){
                     i = -1;
                     newFaketext = []
                     showValue = newFaketext.join('')
                 }
                 i++
                 textAreaValue.value = showValue
-            }
-            function typeTest(thisvalue) {
-                let inputText = thisvalue.value;
-                document.getElementById('textArea').value = array;
             }
         </script>
 </body></html>
